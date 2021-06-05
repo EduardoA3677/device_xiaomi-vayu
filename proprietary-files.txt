@@ -356,6 +356,9 @@ vendor/bin/hvdcp_opti
 vendor/etc/init/init.batterysecret.rc
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
+# Charging daemon
+bin/charger
+
 # CNE
 -vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
