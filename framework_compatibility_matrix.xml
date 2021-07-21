@@ -393,10 +393,6 @@
             <instance>wifidisplaysession</instance>
         </interface>
         <interface>
-            <name>IWifiDisplaySessionImageTrack</name>
-            <instance>wifidisplaysessionimagetrack</instance>
-        </interface>
-        <interface>
             <name>IWifiDisplaySessionAudioTrack</name>
             <instance>wifidisplaysessionaudiotrack</instance>
         </interface>
