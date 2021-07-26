@@ -454,7 +454,6 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar|bef92589e75a6
 
 # IMS - from LA.UM.9.1.r1-10200-SMxxx0.0
 -system_ext/app/imssettings/imssettings.apk|8b47c43d56228dcce93cc8c07c6ceb08cb3d2fe5
--system_ext/priv-app/ims/ims.apk|ed68ecd630ddbd49e88bd0b2e3b50ee35c334ef0
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml|bd9fc166b542b4e730f194ebc996957770d9d497
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml|b40fc74f7d5e58b4e918f952b89a79cf2a5c4088
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml|bfceff47fb0b55a418bed71de6050d876a776ac7
@@ -536,6 +535,9 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so|a19b5e243f5a4cd02a53f6155237bf24c64
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|c54069df308c547e58a3f769d9ca531531be3f3c
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|039903c0a2ec1f4f82a56cc9799f6130d9a865ec
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
+
+# IMS - from LA.UM.9.1.r1-10200-SMxxx0.0 (Custom)
+-system_ext/priv-app/ims/ims.apk|7465bb4174bf455e1e1abe13990e14003aa848d2
 
 # Interface - from LA.UM.9.1.r1-10200-SMxxx0.0
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
