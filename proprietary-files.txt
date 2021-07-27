@@ -405,6 +405,7 @@ vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|3871c4be6f1d57cd11a0da7c44099111771f
 vendor/lib64/libaoa.so|e38ab653612c7fb57a732c0ebadfbd0f9d174b8d
 vendor/lib64/libbatching.so|b5b112c1ee9d87f3028a1a6c02d04056537a4b6d
 vendor/lib64/libcacertclient.so|1d07e004c6660fcd7004deacb446c5e9fe67ce72
+vendor/lib64/libcdfw_remote_api.so|8278ba42253fe2217fb87fe651fc4e1d21f1f85c
 vendor/lib64/libdataitems.so|06bb96e1cfcfd75a9b061ba1f4a7be91a19d6a7e
 vendor/lib64/libgdtap.so|f7ea2035c862fb385d37b224b419aeef4338883e
 vendor/lib64/libgeofencing.so|1845c7396b57af49760b561539d36101dd91dc0d
@@ -600,10 +601,6 @@ vendor/firmware/ipa_uc.b01|204513aead004208e373c6aed72628d5221e4153
 vendor/firmware/ipa_uc.b02|3b10a38f61f127c190649d7cbf8ae508c797e924
 vendor/firmware/ipa_uc.elf|ccdb07c137e46801b8a26bb46141978a76d13baa
 vendor/firmware/ipa_uc.mdt|b8f10bbaf74f8d65ce0f9292ed91fdcf2cc7a52b
-
-# IRQ balance - from vayu
-vendor/bin/msm_irqbalance|bcc114819bd50bfbefe2dfcb9f815f9959cdad44
-vendor/etc/msm_irqbalance.conf|0141a3e34175f62a3ae1f0f44cca94cf7043f2de
 
 # Keymaster - from LA.UM.9.1.r1-10200-SMxxx0.0
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|002c638011b1936fecaa896874d3361ec68eaa46
