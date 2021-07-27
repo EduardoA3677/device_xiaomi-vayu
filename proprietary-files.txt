@@ -741,20 +741,23 @@ vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so|0bad654951ef26081e2952
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|20f419759fa4150598461a9493e14b0b3bcd9282
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|71ed5e6e55368f511bef76c88d0efe5b62af11b9
 
+# QTI Telephony - from LA.QSSI.11.0.r1-10400-qssi.0
+system_ext/framework/qti-telephony-common.jar|1fd37129f961e58f9d1189736e2cb46290666b97
+etc/permissions/privapp-permissions-qti.xml|3eda27003bad39514039190d0d7eb675ba034cb9
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml|42f4553b61731e56d253766554d4479519cea3ff
+
 # RIL - from LA.UM.9.1.r1-10200-SMxxx0.0
 -system_ext/app/DeviceInfo/DeviceInfo.apk|4ff56a7e5abfe2faeb95ae8c967ef4cf72589b07
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|a32f88ddcc8f9cba18aa5697ee5bd52201e89b13
 -system_ext/app/datastatusnotification/datastatusnotification.apk|2fcf2e570818eb317de45f42c0a674db875b6ee4
 -system_ext/app/embms/embms.apk|d7b32a29f2997b26d98710b8c95f5b8dd898350f
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|60af440aae61fcd6939af56a0b94d9b9ef5ebd55
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml|42f4553b61731e56d253766554d4479519cea3ff
 system_ext/etc/permissions/embms.xml|22e7474091f9f71f02dd0cfc76cfa8848a46f079
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|4f0056403f56928b8c75a617ba582f17061f89ae
 system_ext/etc/permissions/telephonyservice.xml|b7831598d3c19c6ce4ef431d1cc44d94c3c35a8d
 system_ext/framework/embmslibrary.jar|b5fe26c1cea597af8a1751332d187f2f574816c1
 system_ext/framework/qcrilhook.jar|f2888f922b8347417dfa86741feb8348795fce6f
-system_ext/framework/qti-telephony-common.jar|0d3da7628506d66852de19f296a05f728710c4e3
 vendor/bin/adpl|dd963eff37e7f3f858b9f72cabcaeb5b9dafccf6
 vendor/bin/hw/qcrild|d5ab9cc3db1e399f6ebafa7220d32eaef9b69882
 vendor/bin/netmgrd|1c95b781d8a43a1eb0716196e217aac8e520d076
