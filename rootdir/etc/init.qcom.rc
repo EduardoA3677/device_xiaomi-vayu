@@ -236,9 +236,6 @@ on boot
     # Create camera directory
     mkdir /mnt/vendor/persist/camera 0755 system cameraserver
 
-    # limit discard size to 128MB in order to avoid long IO latency
-    write /sys/block/sda/queue/discard_max_bytes 134217728
-
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
@@ -396,7 +393,16 @@ on post-fs-data
     chown system system /sys/class/leds/led:switch_2/brightness
     chown system system /sys/class/leds/flashlight/brightness
 
-    # Use aggressive read ahead for device-mapper during boot up
+    # Boot time fs tuning
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/nr_requests 256
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sde/queue/iostats 0
+    write /sys/block/sde/queue/nr_requests 256
+    write /sys/block/sde/queue/read_ahead_kb 2048
+    write /sys/block/sdf/queue/iostats 0
+    write /sys/block/sdf/queue/nr_requests 256
+    write /sys/block/sdf/queue/read_ahead_kb 2048
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
     write /sys/block/dm-2/queue/read_ahead_kb 2048
@@ -450,13 +456,26 @@ on property:persist.vendor.sys.rawdump_copy=0
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
 
-    # Restore device-mapper's read ahead
+    # Runtime fs tuning
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sde/queue/iostats 1
+    write /sys/block/sde/queue/nr_requests 128
+    write /sys/block/sde/queue/read_ahead_kb 128
+    write /sys/block/sdf/queue/iostats 1
+    write /sys/block/sdf/queue/nr_requests 128
+    write /sys/block/sdf/queue/read_ahead_kb 128
     write /sys/block/dm-0/queue/read_ahead_kb 128
     write /sys/block/dm-1/queue/read_ahead_kb 128
     write /sys/block/dm-2/queue/read_ahead_kb 128
     write /sys/block/dm-3/queue/read_ahead_kb 128
     write /sys/block/dm-4/queue/read_ahead_kb 128
     write /sys/block/dm-5/queue/read_ahead_kb 128
+
+    # Block layer tuning: discard chunk size up to 128MB
+    # Otherwise, contiguous discards can be merged
+    write /sys/block/sda/queue/discard_max_bytes 134217728
 
     # WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
