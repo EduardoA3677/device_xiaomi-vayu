@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/conquer_vayu.mk
+    $(LOCAL_DIR)/p404_vayu.mk
 
 COMMON_LUNCH_CHOICES := \
-    conquer_vayu-user \
-    conquer_vayu-userdebug \
-    conquer_vayu-eng
+    p404_vayu-user \
+    p404_vayu-userdebug \
+    p404_vayu-eng

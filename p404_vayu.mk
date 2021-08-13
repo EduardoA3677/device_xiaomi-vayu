@@ -9,14 +9,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common ConquerOS stuff.
-$(call inherit-product, vendor/conquer/config/common.mk)
-CONQUER_BUILD_TYPE := OFFICIAL
-TARGET_USE_GAPPS := true
+$(call inherit-product, vendor/404/configs/common.mk)
+
+# GAPPS
+$(call inherit-product, vendor/google/pixel/config.mk)
+$(call inherit-product, vendor/google/gms/config.mk)
+
+# Bootanimation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from vayu device
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-PRODUCT_NAME := conquer_vayu
+PRODUCT_NAME := p404_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
