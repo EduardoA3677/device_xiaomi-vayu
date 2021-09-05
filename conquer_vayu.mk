@@ -11,15 +11,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-# Inherit common BlissROM configurations
-$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+# Inherit common ConquerOS configurations
+$(call inherit-product, vendor/conquer/config/common.mk)
+CONQUER_BUILD_TYPE := OFFICIAL
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_USE_GAPPS := true
 
-# Inherit GApps
-BLISS_BUILD_VARIANT := gapps
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := bliss_vayu
+PRODUCT_NAME := conquer_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := Poco X3 Pro
@@ -31,3 +32,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="vayu_global-user 11 RKQ1.200826.002 V12.5.2.0.RJUMIXM release-keys"
 
 BUILD_FINGERPRINT := POCO/vayu_global/vayu:11/RKQ1.200826.002/V12.5.2.0.RJUMIXM:user/release-keys
+
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.conquer.device_name=POCO X3 Pro
