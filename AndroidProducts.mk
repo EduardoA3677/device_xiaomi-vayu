@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_vayu.mk
+    $(LOCAL_DIR)/conquer_vayu.mk
 
 COMMON_LUNCH_CHOICES := \
-    havoc_vayu-user \
-    havoc_vayu-userdebug \
-    havoc_vayu-eng
+    conquer_vayu-user \
+    conquer_vayu-userdebug \
+    conquer_vayu-eng
