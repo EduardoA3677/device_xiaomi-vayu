@@ -9,10 +9,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common HavocOS stuff.
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+$(call inherit-product, vendor/conquer/config/common.mk)
 
 # Gapps
-WITH_GAPPS := true
+TARGET_USE_GAPPS := true
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -20,7 +20,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Inherit from vayu device
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-PRODUCT_NAME := havoc_vayu
+PRODUCT_NAME := conquer_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
